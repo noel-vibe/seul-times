@@ -1,12 +1,11 @@
 const API_KEY = `cd07bb6bc3654d55bea35f015d942fbb`
 let newsList = []
 
-
-let menus = document.querySelectorAll("#menu-list button");
-menus.forEach((menu) =>
-  menu.addEventListener("click", (e) => getNewsByTopic(e))
-);
-
+//버튼들에 클릭이벤트 주기
+const menus = document.querySelectorAll(".menus button")
+menus.forEach((menu)=>menu.addEventListener("click",(event)=>getNewsByCategory(event)));
+const sideMenu = document.querySelectorAll(".side-menu-list button")
+sideMenu.forEach((menu)=>menu.addEventListener("click",(event)=>getNewsByCategory(event)));
 
 const getLatesNews = async()=>{
     const url = new URL(`https://seul-times.netlify.app/top-headlines?country=us&apiKey=${API_KEY}`)
@@ -16,6 +15,29 @@ const getLatesNews = async()=>{
     newsList = data.articles
         render();
     console.log("ddd", newsList)
+}
+
+//카테고리별 뉴스 가져오기
+const getNewsByCategory = async (event) => {
+  const category = event.target.textContent.toLowerCase();
+  console.log("category",category);
+  const url = new URL (`https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`)
+  const response = await fetch(url)
+  const data = await response.json()
+  console.log("ddd", data)
+  newsList = data.articles; //가져온 뉴스 
+  render(); //가져온 뉴스 보여주기!
+}
+
+//키워드로 검색한 뉴스 가져오기
+const getNewsByKeyword = async (event) => {
+  const keyword = document.getElementById("search-input").value;
+  const url = new URL (`https://newsapi.org/v2/top-headlines?q=${keyword}&country=kr&apiKey=${API_KEY}`)
+  const response = await fetch(url)
+  const data = await response.json()
+
+  newsList = data.articles; //방금 검색해서 가져온 뉴스 담기
+  render(); //가져온 뉴스 보여주기!
 }
 
 const render =()=>{
@@ -40,11 +62,12 @@ const render =()=>{
     </div>
 </div>`
     ).join("");
-    console.log("html",newsHTML);
+   
 
     document.getElementById('news-board').innerHTML = newsHTML;
 }
- 
+
+//돋보기 버튼 눌렀을때 input box 나오게 하기 
 const openSearchBox = () => {
     let inputArea = document.getElementById("input-area");
     if (inputArea.style.display === "inline") {
@@ -53,6 +76,7 @@ const openSearchBox = () => {
       inputArea.style.display = "inline";
     }
   };
+
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";

@@ -79,9 +79,15 @@ body {
     background-color: beige;
     border-radius: 3px;
 }
+
+.top-button{
+  display: flex;
+  margin-top: 10px;
+}
+
 .search-button {
-    background-color: rgb(86, 123, 149);
-    border: 1px solid rgb(50, 104, 145);
+    background-color: rgb(126, 147, 255);
+    border: 1px solid rgb(126, 147, 255);
     color: rgb(255, 255, 255);
     height: 33px;
     border-radius: 3px;

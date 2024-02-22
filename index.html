@@ -12,33 +12,25 @@
     <div id="mySidenav" class="sidenav">
         <button class="closebtn" onclick="closeNav()">&times;</button>
         <div class ="side-menu-list" id="menu-list">
-            <button>Sport</button>
-            <button>Tech</button>
-            <button>World</button>
-            <button>Finance</button>
-            <button>Politics</button>
             <button>Business</button>
-            <button>Economics</button>
             <button>Entertainment</button>
-            <button>Beauty</button>
-            <button>Travel</button>
-            <button>Music</button>
-            <button>Food</button>
+            <button>General</button>
+            <button>Health</button>
             <button>Science</button>
-            <button>Gaming</button>
-            <button>Energy</button>
+            <button>Sports</button>
+            <button>Technology</button>
         </div>
     </div>
 
     
     <section class = "container">
         <section class="head-line-section">
-            <div>
+            <div class = "top-button">
                 <i class="fi fi-br-menu-burger hide icon-button" onclick="openNav()"></i>
                 <i class="fi fi-br-search icon-button" onclick="openSearchBox()"></i>
                 <span id ="input-area">
                     <input type="text" id="search-input" placeholder="search"/>
-                    <button class="search-button" onclick="searchNews()">Go</button>
+                    <button id= "add-button" class="search-button" onclick="getNewsByKeyword()">Go</button>
                 </span>
             </div>
             <div class = "head-line">
@@ -46,21 +38,13 @@
             </div>
             
             <div class ="menus" id="menu-list">
-                <button>Sport</button>
-                <button>Tech</button>
-                <button>World</button>
-                <button>Finance</button>
-                <button>Politics</button>
                 <button>Business</button>
-                <button>Economics</button>
                 <button>Entertainment</button>
-                <button>Beauty</button>
-                <button>Travel</button>
-                <button>Music</button>
-                <button>Food</button>
+                <button>General</button>
+                <button>Health</button>
                 <button>Science</button>
-                <button>Gaming</button>
-                <button>Energy</button>
+                <button>Sports</button>
+                <button>Technology</button>
             </div>
         </section>
         <section id ="news-board">
