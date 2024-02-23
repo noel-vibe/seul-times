@@ -1,6 +1,6 @@
-//작성자
-//이 파일의 역할
-//시작 날짜 / 마지막 업데이트 날짜
+//작성자 곽슬기
+//이 파일의 역할 / API 이용 뉴스타임즈 만들기
+//시작 날짜 2024/2/19 / 마지막 업데이트 날짜 2024/2/24
 
 const API_KEY = `cd07bb6bc3654d55bea35f015d942fbb`;
 let newsList = [];
@@ -60,7 +60,7 @@ const render = () => {
         }"/>
     </div>
     <div class = "col-lg-8">
-        <h2>${news.title}</h2>
+        <h3>${news.title}</h3>
         <p>
             ${
               news.description == null || news.description == ""
