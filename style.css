@@ -1,136 +1,154 @@
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-.icon-button{
-    padding: 8px 9px 9px;
-    margin-top: 5px;
+  font-family: "Lato", sans-serif;
 }
 
-.icon-button :hover {
-    background-color: beige;
+.top-button {
+  display: flex;
+  justify-content: center; /*수평 중앙정렬*/
+  align-items: center; /*수직 중앙정렬*/
+  background: #efebe6;
+  padding: 1em;
 }
 
-.head-line{
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
+.alert-danger {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.time {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: right;
+  background: #efebe6;
+  padding-right: 20px;
+}
+
+.icon-button {
+  padding: 8px 9px 9px;
+  margin-top: 5px;
+}
+
+.icon-button:hover {
+  background-color: #efebe6;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
+
+.head-line {
+  margin: 1em;
+}
+
 .head-line svg {
-    width : 430px;
-    margin: 0px 20px;
+  width: 200px;
+  margin: 0px 20px;
 }
+
 .head-line-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center; /*수평 중앙정렬*/
+  align-items: center; /*수직 중앙정렬*/
+}
 
 .menus {
-    padding: 5px 0 4px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  
-    border-top:1px solid #ebebeb;
-    border-bottom: 4px double black;
-} 
+  padding: 5px 0 4px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 4px double rgb(179, 179, 179);
+}
 
 .menus button {
-    border: none;
-    background: none;
-    margin: 5px;
+  border: none;
+  background: none;
+  margin: 5px;
 }
 
-.menus button:hover{
-    background-color: beige;
+.menus button:hover {
+  background-color: #efebe6;
 }
 
-.news-img-size{
-    max-width: 100%;
-    max-height: 250px;
-    margin-right: 1em;
-    text-align: center;
+.news-img-size {
+  max-width: 100%;
+  max-height: 250px;
+  margin-right: 1em;
+  text-align: center;
 }
 
 .news {
-    border-bottom: 2px solid black;
-    display: flex;
-    padding: 1em;
+  border-bottom: 2px solid rgb(179, 179, 179);
+  display: flex;
+  padding: 1em;
 }
 
 .side-menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-.side-menu-list button {
-    margin: 5px;
-    border: none;
-    background: none;
-    width: 120px;
-  }
-
-.side-menu-list button:hover {
-    background-color: beige;
-    border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.top-button{
-  display: flex;
-  margin-top: 10px;
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+}
+
+.side-menu-list button:hover {
+  background-color: #dad6d1;
+  border-radius: 3px;
 }
 
 .search-button {
-    background-color: rgb(126, 147, 255);
-    border: 1px solid rgb(126, 147, 255);
-    color: rgb(255, 255, 255);
-    height: 33px;
-    border-radius: 3px;
+  background-color: #dad6d1;
+  border: none;
+  color: rgb(255, 255, 255);
+  height: 33px;
+  border-radius: 3px;
+}
+#search-input {
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 3px;
+  height: 33px;
+}
+
+#input-area {
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #efebe6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hide {
+    display: inline;
   }
-  #search-input {
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 3px;
-    height: 33px;
-  }
-  
-  #input-area {
+  .menus {
     display: none;
   }
-  
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: burlywood;;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  .time {
+    display: none;
   }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    border: none;
-    background: none;
-  }
-  
-
-  @media screen and (max-width: 63rem) {
-      .hide {
-        display: inline;
-      }
-      .menus {
-        display: none;
-      }
-  }
+}
