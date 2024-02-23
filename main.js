@@ -21,7 +21,8 @@ const getLatesNews = async()=>{
 const getNewsByCategory = async (event) => {
   const category = event.target.textContent.toLowerCase();
   console.log("category",category);
-  const url = new URL (`https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`)
+  const url = new URL(`https://seul-times.netlify.app/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`)
+  //const url = new URL (`https://newsapi.org/v2/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`)
   const response = await fetch(url)
   const data = await response.json()
   console.log("ddd", data)
@@ -32,7 +33,8 @@ const getNewsByCategory = async (event) => {
 //키워드로 검색한 뉴스 가져오기
 const getNewsByKeyword = async (event) => {
   const keyword = document.getElementById("search-input").value;
-  const url = new URL (`https://newsapi.org/v2/top-headlines?q=${keyword}&country=kr&apiKey=${API_KEY}`)
+  const url = new URL(`https://seul-times.netlify.app/top-headlines?q=${keyword}&country=kr&apiKey=${API_KEY}`)
+  //const url = new URL (`https://newsapi.org/v2/top-headlines?q=${keyword}&country=kr&apiKey=${API_KEY}`)
   const response = await fetch(url)
   const data = await response.json()
 
