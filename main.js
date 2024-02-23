@@ -8,7 +8,7 @@ const sideMenu = document.querySelectorAll(".side-menu-list button")
 sideMenu.forEach((menu)=>menu.addEventListener("click",(event)=>getNewsByCategory(event)));
 
 const getLatesNews = async()=>{
-    const url = new URL(`https://seul-times.netlify.app/top-headlines?country=us&apiKey=${API_KEY}`)
+    const url = new URL(`https://seul-times.netlify.app/top-headlines?country=kr&apiKey=${API_KEY}`)
     //const url = new URL(`https://newsapi.org/v2/top-headlines?country=kr&apiKey=${API_KEY}`)
     const response = await fetch(url)
     const data = await response.json()
