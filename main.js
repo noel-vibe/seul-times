@@ -146,7 +146,7 @@ function getToday() {
   const date = todaydate.getDate();
   const day = days[days_num];
 
-  today.innerText = `${year}년 ${month}월 ${date}일 ${day}  `;
+  today.innerText = `${year}년 ${month}월 ${date}일 ${day}`;
 }
 getToday();
 //오늘 날짜 시간 출력 끝

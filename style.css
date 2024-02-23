@@ -17,9 +17,8 @@ body {
 }
 
 .time {
-  display: flex;
+  text-align: right;
   font-size: 0.8em;
-  justify-content: right;
   background: #efebe6;
   padding-right: 20px;
 }
