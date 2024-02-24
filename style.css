@@ -1,13 +1,16 @@
 body {
   font-family: "Lato", sans-serif;
+  background: #efebe6;
 }
 
 .top-button {
   display: flex;
-  justify-content: center; /*수평 중앙정렬*/
   align-items: center; /*수직 중앙정렬*/
-  background: #efebe6;
-  padding: 1em;
+}
+
+.time{
+  text-align: center;
+  font-size: 0.7em;
 }
 
 .alert-danger {
@@ -16,20 +19,14 @@ body {
   font-size: 30px;
 }
 
-.time {
-  text-align: right;
-  font-size: 0.8em;
-  background: #efebe6;
-  padding-right: 20px;
-}
-
 .icon-button {
-  padding: 8px 9px 9px;
-  margin-top: 5px;
+  padding: 9px 9px;
+  margin: 10px;
 }
 
 .icon-button:hover {
-  background-color: #efebe6;
+  text-decoration:underline; 
+  color:#3b3b3b;
 }
 
 .hide {
@@ -37,18 +34,13 @@ body {
 }
 
 .head-line {
-  margin: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
 }
 
 .head-line svg {
   width: 200px;
-  margin: 0px 20px;
-}
-
-.head-line-section {
-  display: flex;
-  justify-content: center; /*수평 중앙정렬*/
-  align-items: center; /*수직 중앙정렬*/
 }
 
 .menus {
@@ -66,7 +58,8 @@ body {
 }
 
 .menus button:hover {
-  background-color: #efebe6;
+  text-decoration:underline; 
+  color:#3b3b3b;
 }
 
 .news-img-size {
@@ -74,12 +67,13 @@ body {
   max-height: 250px;
   margin-right: 1em;
   text-align: center;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .news {
   border-bottom: 2px solid rgb(179, 179, 179);
   display: flex;
+  text-align :center;
   padding: 1em;
 }
 
@@ -118,6 +112,22 @@ body {
   display: none;
 }
 
+.pagination {
+  margin-top: 1em;
+}
+
+.page-item.active .page-link{
+    background-color: #efebe6;
+    color: rgb(127, 127, 127);
+    border-color: #efebe6;
+}
+
+.page-link{
+    color:rgb(127, 127, 127)
+}
+.col-lg-8{
+    margin-top:1em
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -129,6 +139,7 @@ body {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  color: rgb(38, 38, 38);
 }
 
 .sidenav .closebtn {
@@ -148,7 +159,17 @@ body {
   .menus {
     display: none;
   }
-  .time {
+  .clock {
     display: none;
+  }
+  .time{
+    text-align: center;
+    font-size: 0.6em;
+    padding-bottom: 0.5em;
+    border-bottom: 4px double rgb(179, 179, 179);
+  }
+  #search-input{
+    height: 33px;
+    width: 100px;
   }
 }
